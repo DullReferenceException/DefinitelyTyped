@@ -34,7 +34,7 @@
  *   THE SOFTWARE.
  */
 
-declare class Bluebird<R> implements Bluebird.Thenable<R>, Bluebird.Inspection<R> {
+declare class Bluebird<R> implements PromiseLike<R>, Bluebird.Thenable<R>, Bluebird.Inspection<R> {
   /**
    * Create a new promise. The passed in function will receive functions `resolve` and `reject` as its arguments which can be called to seal the fate of the created promise.
    * If promise cancellation is enabled, passed in function will receive one more function argument `onCancel` that allows to register an optional cancellation callback.
